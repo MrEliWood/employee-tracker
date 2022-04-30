@@ -1,7 +1,22 @@
 // import packages and modules
 const inquirer = require('inquirer');
 const cTable = require('console.table');
-const db = require("../db/connection");
+const db = require("./db/connection.js");
+
+// functions for handling user selections
+function viewAllDepartments() {};
+
+function viewAllRoles() {};
+
+function viewAllEmployees() {};
+
+function addDepartment() {};
+
+function addRole() {};
+
+function addEmployee() {};
+
+function changeRole() {};
 
 // main menu
 inquirer
@@ -32,5 +47,13 @@ inquirer
     } else if (main === 'Update an employee role') {
         changeRole();
     };
+
+  });
+
+  const sql = "SELECT * FROM employee";
+
+  db.query(sql, (err, res) => {
+
+    console.table(res);
 
   });
