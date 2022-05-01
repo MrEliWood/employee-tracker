@@ -20,7 +20,8 @@ SELECT employee.id AS ID, employee.first_name AS First_Name, employee.last_name 
 FROM employee
 JOIN role ON employee.role_id = role.id
 JOIN department ON role.department_id = department.id
-LEFT JOIN employee AS manager ON employee.manager_id = manager.id;
+LEFT JOIN employee AS manager ON employee.manager_id = manager.id
+ORDER BY employee.id;
 
 -- add department
 -- INSERT INTO department (name)
@@ -44,6 +45,6 @@ LEFT JOIN employee AS manager ON employee.manager_id = manager.id;
 -- JOIN role ON employee.role_id = role.id;
 
 -- get department name from id
-SELECT role.id AS role_id, title, employee.id AS employee_id, first_name, last_name
-FROM employee
-JOIN role ON employee.role_id = role.id;
+-- SELECT role.id AS role_id, title, employee.id AS employee_id, first_name, last_name
+-- FROM employee
+-- JOIN role ON employee.role_id = role.id;

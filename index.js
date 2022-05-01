@@ -50,7 +50,7 @@ function viewAllDepartments() {
       console.log('\n\n!! ERROR LOADING DEPARTMENTS !!\n');
       mainMenu();
     } else {
-      console.table('', res, '========================================\n');
+      console.table('\n', res, '========================================\n');
       mainMenu();
     };
 
@@ -70,7 +70,7 @@ function viewAllRoles() {
       console.log('\n\n!! ERROR LOADING ROLES !!\n');
       mainMenu();
     } else {
-      console.table('', res, '========================================\n');
+      console.table('\n', res, '========================================\n');
       mainMenu();
     };
 
@@ -87,7 +87,8 @@ function viewAllEmployees() {
   FROM employee
   JOIN role ON employee.role_id = role.id
   JOIN department ON role.department_id = department.id
-  LEFT JOIN employee AS manager ON employee.manager_id = manager.id`;
+  LEFT JOIN employee AS manager ON employee.manager_id = manager.id
+  ORDER BY employee.id`;
 
   db.query(query, (err, res) => {
 
@@ -95,7 +96,7 @@ function viewAllEmployees() {
       console.log('\n\n!! ERROR LOADING EMPLOYEES !!\n');
       mainMenu();
     } else {
-      console.table('', res, '========================================\n');
+      console.table('\n', res, '========================================\n');
       mainMenu();
     };
 
