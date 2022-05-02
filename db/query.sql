@@ -16,7 +16,7 @@ FROM role
 JOIN department ON role.department_id = department.id;
 
 -- view employees
-SELECT employee.id AS ID, employee.first_name AS First_Name, employee.last_name AS Last_Name, title AS Role, salary AS Salary, department.name AS Department, manager.first_name AS Manager_First, manager.last_name AS Manager_Last
+SELECT *
 FROM employee
 JOIN role ON employee.role_id = role.id
 JOIN department ON role.department_id = department.id
@@ -48,3 +48,20 @@ ORDER BY employee.id;
 -- SELECT role.id AS role_id, title, employee.id AS employee_id, first_name, last_name
 -- FROM employee
 -- JOIN role ON employee.role_id = role.id;
+
+-- update employee role
+-- UPDATE employee
+-- SET role_id = ?
+-- WHERE id = ?;
+
+-- SELECT * 
+-- FROM employee 
+-- JOIN role ON employee.role_id = role.id;
+
+-- SELECT  FROM role;
+
+SELECT *
+FROM role;
+
+SELECT *
+FROM employee;
