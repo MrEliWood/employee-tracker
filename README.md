@@ -4,6 +4,8 @@
 
 The Employee Tracker is a command line application that allows users to build a database of employees with customizable departments, roles, and manager relationships.
 
+[VIDEO WALKTHROUGH](https://youtu.be/lLtAlSXhB78)
+
 ![Screenshot of Note Taker landing page](./assets/Screen%20Shot%202022-05-01%20at%206.00.41%20PM.png)
 
 ## Table of Contents
